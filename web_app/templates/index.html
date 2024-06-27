@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Piece Classifier</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chess Piece Classifier</h1>
+        
+        <!-- Custom-styled upload button and file input -->
+        <div class="upload-container">
+            <label for="file" class="upload-btn" id="upload-label">Choose Image</label>
+            <input type="file" id="file" accept="image/*" style="display: none;">
+            <p id="file-name" style="display: none;"></p>
+        </div>
+        
+        <!-- Analyze and Reset buttons -->
+        <div class="button-container">
+            <button id="analyze-btn" class="btn analyze-btn">Analyze</button>
+            <button id="reset-btn" class="btn reset-btn">Reset</button>
+        </div>
+        
+        <!-- Analyzing and result sections -->
+        <div id="analyzing" style="display: none;">
+            <p id="wait-text">Analyzing...</p>
+            <p id="counter">0</p>
+        </div>
+        
+        <div id="result" style="display: none;">
+            <p>Class: <span id="class"></span></p>
+            <p>Accuracy: <span id="accuracy"></span>%</p>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/app.js"></script>    
+</body>
+</html>
